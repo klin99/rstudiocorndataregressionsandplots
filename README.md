@@ -1,4 +1,3 @@
-# rstudiocorndataregressionsandplots
 # This repository contains an R script for analyzing historical data on corn prices, customer price index (CPI), and corn quantity. The script performs the following tasks:
 
 # Resets the R environment.
