@@ -86,5 +86,3 @@ summary(reg1)
 
 # Perform a coefficient test with Newey-West standard errors
 coeftest(reg1, vcov = NeweyWest(reg1, lag = 12, prewhite = FALSE, adjust = TRUE))
-
-
