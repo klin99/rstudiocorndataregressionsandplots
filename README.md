@@ -1,7 +1,7 @@
 # This repository contains an R script for analyzing historical data on corn prices, customer price index (CPI), and corn quantity. The script crafts informative visualizations to track the evolving trends of these variables over time. In addition, it conducts statistical analysis tasks, including logarithmic relationship examination, residual study, linear regression modeling, and statistical tests to asses the data closely.
 ### The script performs the following tasks: 
 
-Resets the R environment.
+- Resets the R environment.
 Reads data from an Excel file into R.
 Utilizes the tidyverse package for data manipulation.
 Uses the sandwich and lmtest packages for addressing correlated errors.
