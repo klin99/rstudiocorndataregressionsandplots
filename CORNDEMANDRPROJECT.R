@@ -1,4 +1,4 @@
-# To reset r script
+# To reset r environment
 rm(list=ls())
 
 # Reading excel file and placing data into r studio environment
