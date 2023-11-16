@@ -13,7 +13,6 @@ library(tidyverse)
 library(sandwich)
 library(lmtest)
 
-
 # Plotting everything 
 plot_ci <- corn %>%
   mutate(CPI = CPI / 100) %>%
@@ -26,8 +25,6 @@ plot_ci <- corn %>%
 
 plot_ci
 
-
-
 # Take logs of price and quantity
 corn <- corn %>%
   mutate(
@@ -36,11 +33,9 @@ corn <- corn %>%
     log_rp = log(P / CPI)
   )
   
-
 # Take first regression to learn change in log_p for one unit in change of log_q
 reg1 <- lm(log_p ~ log_q, data = corn)
 summary(reg1)
-
 
 # Add lag and residuals to data frame, (examine relationships between variable and its past)
 corn <- corn %>%
@@ -48,7 +43,6 @@ corn <- corn %>%
     e = reg1$residuals,
     lag_e = lag(e)
   )
-
 
 # Create a plot of residuals with the year(date)
 plot_e <- corn %>%
@@ -59,7 +53,6 @@ plot_e <- corn %>%
 
 # Display the plot
 plot_e
-
 
 # Fit a linear regression model with residuals (e) regressed on lagged residuals (lag_e) and log_q
 reg_bg <- lm(e ~ lag_e + log_q, data = corn)
